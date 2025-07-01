@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^cvf+r05mik5v5!ps5dxd&@t5t+mi3tx2$t031jcyn87ke94bt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['rag-chatbot-31ol.onrender.com']
 
 
 # Application definition
@@ -131,3 +131,4 @@ TEMPLATES[0]['DIRS'] = [BASE_DIR / "chat/templates"]
 # Use dotenv for environment vars
 import dotenv
 dotenv.load_dotenv()
+PORT = os.environ.get('PORT', 8000)
